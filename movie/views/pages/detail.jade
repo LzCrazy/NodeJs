@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+    .row            
+        .col-md-7
+            //- 暂时用一下面的一个指定好的地址吧 embed(src="#{movie.flash}", allowFullSrceen="true", quality="height",width="720",height="600",align="middle",type="application")    
+            video(src="/001.mkv", autoplay,controls,loop)    
+        .col-md-5
+            .dl-horizontal
+                dt 电影名称
+                dd= movie.title
+                dt 导演
+                dd #{movie.doctor}
+                dt 国家
+                dd #{movie.country}
+                dt 年份
+                dd #{movie.year}
+                dt 简介
+                dd #{movie.summary}
+                dt 海报
+                dd 
+                    img.img-responsive.img-rounded(src="#{movie.poster}")
