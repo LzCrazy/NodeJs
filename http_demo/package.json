@@ -1,0 +1,10 @@
+{
+	"name":"http_demo",
+	"description":"HTTP基础和概念",
+	"versioin":"0.0.1",
+	"main":"./app.js",
+	"dependencies":{
+		"express":"4.x",
+		"body-parser":"*"
+	}
+}
