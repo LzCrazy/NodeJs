@@ -26,4 +26,37 @@ Node.js不为每个客户连接创建一个新的线程，而仅仅使用一个�
 
 非阻塞I／O，不会等待IO的结束，而是会执行后面的语句
 
-事件机制，事件环，不管是新用户的请求，还是老用户的I/O王城，都将以事件方式加入事件环，等待调用
+事件机制，事件环，不管是新用户的请求，还是老用户的I/O完成，都将以事件方式加入事件环，等待调用
+
+2.API
+
+HTTP模块
+
+```
+	//引用模块
+	var http = require('http')
+
+	//创建一个服务器，回调函数表示接收到请求之后做的事情
+	var server = http.createServer(function(req,res){
+		//req表示请求，res表示响应
+		console.log('服务器接收到了请求'+req.url)
+		res.end()
+		})
+	//监听端口
+	server.listen(8089,"localhost")
+```
+[登陆demo](/http_demo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
