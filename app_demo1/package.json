@@ -1,8 +1,0 @@
-{
-	"name": "app_demo",
-	"main": "./app.js",
-	"dependencies": {
-		"express": "*",
-		"body-parser": "*"
-	}
-}
