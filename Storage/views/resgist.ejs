@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>regist</title>
+</head>
+<body>
+	<div>
+		<p>
+			username: <input type="text" name="username" id="username">
+		</p>
+		<p>
+			password: <input type="password" name="mima" id="mima">
+		</p>
+		<p>
+			<input type="button" id="regist" value="注册">
+		</p>
+	</div>
+	<script type="text/javascript" src="/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		// ajax提交表单
+		$("#regist").click(function(){
+			$.get("/doregist",{
+				"username":$("#username").val(),
+				"mima":$("#mima").val()
+			},function(result){
+				if(result ==  "1"){
+					alert("注册陈功");
+				}else{
+					alert("注册失败");
+				}
+			})
+		})
+	</script>
+</body>
+</html>
